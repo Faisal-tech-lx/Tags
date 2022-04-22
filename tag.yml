@@ -2,14 +2,3 @@
 - name: Run Tags	
   hosts: Test
   tasks:
-  - name: Install vsftpd
-    yum:
-      name: vsftpd
-      state: installed
-    tags: [never,ftp]
-
-  - name: Install httpd
-    yum:
-      name:  httpd
-      state:  installed
-    tags: [never,http]
