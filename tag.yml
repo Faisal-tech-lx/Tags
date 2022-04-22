@@ -2,3 +2,15 @@
 - name: Run Tags	
   hosts: Test
   tasks:
+  - name: Copy Contenet to files
+    copy:
+      content: 'Helllo World'
+      dest: /tmp/tag1.txt
+    tags: [never,taging1]
+
+
+  - name: Copy Content to file2
+    copy:
+      content: 'Hello World 2'
+      dest: /tmp/tag2.txt
+    tags: [never,taging2]
